@@ -38,6 +38,7 @@ router.post('/', async (req, res) => {
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
+        //line 41 error?
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
             
